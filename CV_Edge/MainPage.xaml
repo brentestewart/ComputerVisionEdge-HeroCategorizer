@@ -9,6 +9,16 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Name="MainImage" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None" />
+        <TextBlock Grid.Row="1" Text="{Binding Results}" HorizontalAlignment="Center" FontSize="24"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Browse" Command="{Binding BrowseCommand}" Height="50" Width="200" Margin="50" />
+            <Button Content="Analyze" Command="{Binding AnalyzeCommand}" Height="50" Width="200" Margin="50"/>
+        </StackPanel>
     </Grid>
 </Page>
